@@ -1,0 +1,56 @@
+﻿@model WaterIntakeManagement.Models.WaterIntake
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Workout</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DailyGoalInMilliliters)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DailyGoalInMilliliters)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AmountInMilliliters)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AmountInMilliliters)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeOfDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeOfDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
